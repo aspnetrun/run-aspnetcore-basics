@@ -1,0 +1,53 @@
+﻿@page
+@model AspNetRunBasicRealWorld.Pages.Product.EditModel
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Product</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Product.Name" class="control-label"></label>
+                <input asp-for="Product.Name" class="form-control" />
+                <span asp-validation-for="Product.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Product.Description" class="control-label"></label>
+                <input asp-for="Product.Description" class="form-control" />
+                <span asp-validation-for="Product.Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Product.UnitPrice" class="control-label"></label>
+                <input asp-for="Product.UnitPrice" class="form-control" />
+                <span asp-validation-for="Product.UnitPrice" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Product.CategoryId" class="control-label"></label>
+                <select asp-for="Product.CategoryId" class="form-control" asp-items="ViewBag.CategoryId"></select>
+                <span asp-validation-for="Product.CategoryId" class="text-danger"></span>
+            </div>
+
+            <input type="hidden" asp-for="Product.Id" />
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
+
