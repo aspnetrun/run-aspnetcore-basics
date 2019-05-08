@@ -4,14 +4,16 @@ using AspNetRunBasicRealWorld.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace AspNetRunBasicRealWorld.Migrations
 {
     [DbContext(typeof(AspnetRunContext))]
-    partial class AspnetRunContextModelSnapshot : ModelSnapshot
+    [Migration("20190508110323_IdentityAdded")]
+    partial class IdentityAdded
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
