@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using AspNetRunBasicRealWorld.Repositories;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace AspNetRunBasicRealWorld.Pages.Product
 {
+    [Authorize]
     public class IndexModel : PageModel
     {
         private readonly IProductRepository _productRepository;

@@ -58,7 +58,7 @@ namespace AspNetRunBasicRealWorld
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
-            app.UseAuthentication();
+            app.UseAuthentication();            
 
             app.UseMvc();
         }
