@@ -2,20 +2,35 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AspNetRunBasicRealWorld.Data;
 using AspNetRunBasicRealWorld.Entities;
 
 namespace AspNetRunBasicRealWorld.Repositories
 {
     public class ContactRepository : IContactRepository
     {
-        public Task<Contact> SendMessage(Contact contact)
+        protected readonly AspnetRunContext _dbContext;
+
+        public ContactRepository(AspnetRunContext dbContext)
         {
-            throw new NotImplementedException();
+            _dbContext = dbContext ?? throw new ArgumentNullException(nameof(dbContext));
         }
 
-        public Task<Contact> Subscribe(string address)
+        public async Task<Contact> SendMessage(Contact contact)
         {
-            throw new NotImplementedException();
+            _dbContext.Contacts.Add(contact);
+            await _dbContext.SaveChangesAsync();
+            return contact;
+        }
+
+        public async Task<Contact> Subscribe(string address)
+        {
+            var newContact = new Contact();
+            newContact.Email = address;
+            newContact.Message = address;
+            newContact.Name = address;
+
+            return newContact;
         }
     }
 }
