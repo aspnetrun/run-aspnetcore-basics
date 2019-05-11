@@ -7,3 +7,4 @@ To be implemented;
 * theme
 * authorization
 * aspnet features - viewComponent, etc..
+* slugification
