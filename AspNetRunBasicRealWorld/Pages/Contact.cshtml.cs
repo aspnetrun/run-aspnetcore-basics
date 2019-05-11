@@ -16,10 +16,6 @@ namespace AspNetRunBasicRealWorld.Pages
             _contactRepository = contactRepository ?? throw new ArgumentNullException(nameof(contactRepository));
         }
 
-        public ContactModel()
-        {
-        }
-
         [BindProperty]
         public Contact Contact { get; set; }
         public string Message { get; private set; }
@@ -35,17 +31,12 @@ namespace AspNetRunBasicRealWorld.Pages
                 return Page();
             }
 
-            await _contactRepository.SendMessage(Contact);            
+            await _contactRepository.SendMessage(Contact);
             return RedirectToPage("Confirmation", "Contact");
         }
 
         public async Task<IActionResult> OnPostSubscribeAsync(string address)
         {
-            if (!ModelState.IsValid)
-            {
-                return Page();
-            }
-
             await _contactRepository.Subscribe(address);
             return RedirectToPage("Confirmation", "Subscribe");
         }

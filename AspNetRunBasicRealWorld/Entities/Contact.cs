@@ -4,6 +4,8 @@ namespace AspNetRunBasicRealWorld.Entities
 {
     public class Contact
     {
+        public int Id { get; set; }
+
         [Required]
         public string Name { get; set; }
 

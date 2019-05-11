@@ -22,28 +22,28 @@
                     <div class="controls">
                         <label asp-for="Contact.Name">Name:</label>
                         <input asp-for="Contact.Name" class="form-control">
-                        <span asp-validation-for="Contact.Name"></span>
+                        <span asp-validation-for="Contact.Name" class="alert-danger"></span>
                     </div>
                 </div>
                 <div class="control-group form-group">
                     <div class="controls">
                         <label asp-for="Contact.Phone">Phone:</label>
                         <input asp-for="Contact.Phone" class="form-control">
-                        <span asp-validation-for="Contact.Phone"></span>
+                        <span asp-validation-for="Contact.Phone" class="alert-danger"></span>
                     </div>
                 </div>
                 <div class="control-group form-group">
                     <div class="controls">
                         <label asp-for="Contact.Email">Email:</label>
                         <input asp-for="Contact.Email" class="form-control">
-                        <span asp-validation-for="Contact.Email"></span>
+                        <span asp-validation-for="Contact.Email" class="alert-danger"></span>
                     </div>
                 </div>
                 <div class="control-group form-group">
                     <div class="controls">
                         <label asp-for="Contact.Message">Message:</label>
                         <textarea asp-for="Contact.Message" rows="10" cols="100" class="form-control"></textarea>
-                        <span asp-validation-for="Contact.Message"></span>
+                        <span asp-validation-for="Contact.Message" class="alert-danger"></span>
                     </div>
                 </div>
                 <div id="success"></div>

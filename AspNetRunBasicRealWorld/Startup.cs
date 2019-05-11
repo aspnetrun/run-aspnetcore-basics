@@ -27,6 +27,7 @@ namespace AspNetRunBasicRealWorld
                 c.UseSqlServer(Configuration.GetConnectionString("AspnetRunConnection")));
             // add repository dependecy
             services.AddScoped<IProductRepository, ProductRepository>();
+            services.AddScoped<IContactRepository, ContactRepository>();
 
 
 
