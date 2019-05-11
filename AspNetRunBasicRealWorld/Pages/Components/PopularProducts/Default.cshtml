@@ -1,0 +1,17 @@
+﻿@model IEnumerable<Product>
+
+<div class="card">
+    <div class="card-body">
+        <h2 class="card-title">Popular Products</h2>
+        @foreach (var product in Model)
+        {
+            <p>
+                <span class="card-text text-success">@product.Name</span>
+                @product.Summary
+            </p>
+        }
+    </div>
+    <div class="card-footer">
+        <a href="#" class="btn btn-success">Full Menu</a>
+    </div>
+</div>
