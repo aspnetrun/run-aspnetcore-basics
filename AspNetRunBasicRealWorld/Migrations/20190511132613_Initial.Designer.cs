@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AspNetRunBasicRealWorld.Migrations
 {
     [DbContext(typeof(AspnetRunContext))]
-    [Migration("20190508110323_IdentityAdded")]
-    partial class IdentityAdded
+    [Migration("20190511132613_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -46,13 +46,19 @@ namespace AspNetRunBasicRealWorld.Migrations
 
                     b.Property<int>("CategoryId");
 
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasMaxLength(255);
+                    b.Property<string>("Description");
+
+                    b.Property<string>("ImageFile");
 
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(80);
+
+                    b.Property<string>("Slug")
+                        .IsRequired()
+                        .HasMaxLength(40);
+
+                    b.Property<string>("Summary");
 
                     b.Property<int>("UnitPrice");
 
@@ -180,9 +186,11 @@ namespace AspNetRunBasicRealWorld.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
                 {
-                    b.Property<string>("LoginProvider");
+                    b.Property<string>("LoginProvider")
+                        .HasMaxLength(128);
 
-                    b.Property<string>("ProviderKey");
+                    b.Property<string>("ProviderKey")
+                        .HasMaxLength(128);
 
                     b.Property<string>("ProviderDisplayName");
 
@@ -213,9 +221,11 @@ namespace AspNetRunBasicRealWorld.Migrations
                 {
                     b.Property<string>("UserId");
 
-                    b.Property<string>("LoginProvider");
+                    b.Property<string>("LoginProvider")
+                        .HasMaxLength(128);
 
-                    b.Property<string>("Name");
+                    b.Property<string>("Name")
+                        .HasMaxLength(128);
 
                     b.Property<string>("Value");
 
