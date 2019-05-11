@@ -4,24 +4,100 @@
     ViewData["Title"] = "Home page";
 }
 
-<h4>AspnetRun run-code Repository</h4>
+<header>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+            <div class="carousel-item active" style="background-image: url('images/banner/banner-bag.png')">
+                <div class="carousel-caption d-none d-md-block">
+                    <h3>Premium Roasted Coffee</h3>
+                    <p>Simply the best.</p>
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('images/banner/banner-ground.png')">
+                <div class="carousel-caption d-none d-md-block">
+                    <h3>Stay Grounded</h3>
+                    <p>Take our grounded coffee home to help stay focused.</p>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</header>
 
-<p>
-    You can check repository pages in here <strong><a asp-page="/Product/Index">Products</a></strong> and <strong><a asp-page="/Category/Index">Categories</a></strong>.
-</p>
-
-<p>
-    A starter kit for your next web application. Boilerplate for ASP.NET Core reference application with Entity Framework Core, demonstrating a layered application architecture with DDD best practices.
-</p>
-
-<p>
-    You can check full documentation and step by step development of 100+ page eBook PDF from here -  <strong><a href="http://www.aspnetrun.com/Book">http://www.aspnetrun.com/Book</a></strong>
-</p>
-
-<p>
-    ASP.NET Run is a general purpose starter kit application specially designed for new modern web applications. It uses already familiar tools and implements best practices around them to provide you a SOLID development experience. This repository focused on traditional Web Application Development with a single deployment.
-</p>
-
-<p>
-    The goal for this boilerplate is to demonstrate some of the principles and patterns described in the eBook. Also there is a sample project which is implemented this repository and build sample of eCommerce reference application, you can check this repo in this location : <strong><a href="https://github.com/aspnetrun/run-core-sample">run-core-sample</a></strong>
-</p>
+<div class="container">
+    <h1 class="my-4">Three options to keep your brain wired.</h1>
+    <div class="row">
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <div class="card-image bg-ground">
+                </div>
+                <div class="card-body">
+                    <h2 class="card-title">Coffee</h2>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod tenetur ex natus at dolorem enim! Nesciunt pariatur voluptatem sunt quam eaque, vel, non in id dolore voluptates quos eligendi labore.</p>
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="btn btn-success">Full Menu</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <div class="card-image bg-bagel">
+                </div>
+                <div class="card-body">
+                    <h2 class="card-title">Carbs</h2>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod tenetur ex natus at dolorem enim! Nesciunt pariatur voluptatem sunt quam eaque, vel, non in id dolore voluptates quos eligendi labore.</p>
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="btn btn-success">Full Menu</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <div class="card-image bg-table">
+                </div>
+                <div class="card-body">
+                    <h2 class="card-title">Community</h2>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod tenetur ex natus at dolorem enim! Nesciunt pariatur voluptatem sunt quam eaque, vel, non in id dolore voluptates quos eligendi labore.</p>
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="btn btn-success">Get Involved</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr class="mb-5">
+    <div class="row">
+        <div class="col-md-4">
+            @*<partial name="MobileWidget" model="@("Download Today")" />*@
+        </div>
+        <div class="col-md-4">
+            @*<vc:popular-brews count="1" />*@
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h2>Contact Us</h2>
+                    <img style="width: 75%; margin: 0 auto; display: block;" src="~/images/placeholder.png" />
+                    <p>Questions or feedback about anything? We'd love to hear from you.</p>
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="btn btn-success">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr class="mb-5">
+</div>
