@@ -1,0 +1,84 @@
+﻿@page
+@model ContactModel
+@{
+}
+
+<div class="container">
+    <h1 class="mt-4 mb-3">
+        Contact
+        <small>We'd love to hear from you.</small>
+    </h1>
+    <hr />
+    @if (!string.IsNullOrEmpty(Model.Message))
+    {
+        <div class="alert alert-success">@Model.Message</div>
+    }
+    <div class="row">
+        <div class="col-md-8 mb-4">
+            <p>Life gets busy but we try to respond with 24 hours.  If you have a more immediate question, give us a ring using the number over on the right. We are crazy friendly!</p>
+            <br />
+            <form asp-page="Contact" method="post" name="sentMessage" id="contactForm">
+                <div class="control-group form-group">
+                    <div class="controls">
+                        <label asp-for="Contact.Name">Name:</label>
+                        <input asp-for="Contact.Name" class="form-control">
+                        <span asp-validation-for="Contact.Name"></span>
+                    </div>
+                </div>
+                <div class="control-group form-group">
+                    <div class="controls">
+                        <label asp-for="Contact.Phone">Phone:</label>
+                        <input asp-for="Contact.Phone" class="form-control">
+                        <span asp-validation-for="Contact.Phone"></span>
+                    </div>
+                </div>
+                <div class="control-group form-group">
+                    <div class="controls">
+                        <label asp-for="Contact.Email">Email:</label>
+                        <input asp-for="Contact.Email" class="form-control">
+                        <span asp-validation-for="Contact.Email"></span>
+                    </div>
+                </div>
+                <div class="control-group form-group">
+                    <div class="controls">
+                        <label asp-for="Contact.Message">Message:</label>
+                        <textarea asp-for="Contact.Message" rows="10" cols="100" class="form-control"></textarea>
+                        <span asp-validation-for="Contact.Message"></span>
+                    </div>
+                </div>
+                <div id="success"></div>
+                <button type="submit" class="btn btn-success" id="sendMessageButton">Send Message!</button>
+            </form>
+        </div>
+        <div class="col-md-4">
+            <div>
+                <h3>Keep in Touch</h3>
+                <p>Sign up for our mailing list - no spam, we promise.</p>
+                <form asp-page-handler="Subscribe">
+                    <div class="control-group form-group">
+                        <input name="address" type="text" class="form-control" placeholder="Email" />
+                    </div>
+                    <div class="control-group form-group">
+                        <input type="submit" class="btn btn-success" value="Join" />
+                    </div>
+                </form>
+            </div>
+            <hr />
+            <partial name="MobileWidget" model="@("Get the app!")" />
+            <hr />
+            <div>
+                <h3>Contact Details</h3>
+                <p>
+                    1234 Wired Brain Blvd
+                    <br>Awesome City, MM 55555
+                    <br>
+                </p>
+                <p>
+                    <span title="Phone">Phone</span>: (123) 456-7890<br />
+                    <span title="Hours">Hours</span>: Monday - Friday: 6:00 AM to 9:00 PM
+                </p>
+            </div>
+            <img style="width: 100%" src="~/images/placeholder.png" />
+        </div>
+    </div>
+</div>

@@ -27,6 +27,6 @@ namespace AspNetRunBasicRealWorld.Pages.Product
         {
             ProductList = await _productRepository.GetProductByNameAsync(SearchTerm);
             return Page();
-        }        
+        }
     }
 }
