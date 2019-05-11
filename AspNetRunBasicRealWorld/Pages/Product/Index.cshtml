@@ -4,7 +4,62 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Product List</h1>
+<div class="container">
+    <h1 class="mt-4 mb-3">
+        Our Menu
+    </h1>
+    <hr />
+    <h3>Brain food, comfort food..we have it all.</h3>
+    <p>Our coffee is imported from fair trade establishments throughout the world.  Our food is made with all natural ingredients and sourced from local farms.  We're committed to sustainability!</p>
+    <div class="row">
+        @foreach (var product in Model.ProductList)
+        {
+            <div class="col-lg-4 col-sm-6 portfolio-item">
+                <div class="card h-100">
+                    <a href="/item"><img asp-append-version="true" class="card-img-top" src="~/images/menu/@product.ImageFile" alt=""></a>
+                    <div class="card-body">
+                        <h4 class="card-title">
+                            <a class="color-main" href="#">@product.Name</a>
+                        </h4>
+                        <p class="card-text">@product.Description</p>
+                    </div>
+                    <div class="card-footer">
+                        <a asp-page="./Details" asp-route-slug="@product.Slug" class="btn btn-success w-100">Details & Nutrition</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+    <ul class="pagination justify-content-center">
+        <li class="page-item">
+            <a class="page-link" href="#" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+                <span class="sr-only">Previous</span>
+            </a>
+        </li>
+        <li class="page-item">
+            <a class="page-link" href="#">1</a>
+        </li>
+        <li class="page-item">
+            <a class="page-link" href="#">2</a>
+        </li>
+        <li class="page-item">
+            <a class="page-link" href="#">3</a>
+        </li>
+        <li class="page-item">
+            <a class="page-link" href="#" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+                <span class="sr-only">Next</span>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+
+
+
+@*<h1>Product List</h1>
 
 <form method="get">
     <div class="form-group">
@@ -55,4 +110,4 @@
             </tr>
         }
     </tbody>
-</table>
+</table>*@
