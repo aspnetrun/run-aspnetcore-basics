@@ -19,7 +19,7 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" asp-area="" asp-page="Index">Home</a>
+                        <a class="nav-link" asp-area="" asp-page="/Index">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" asp-area="" asp-page="/Product/Index">Products</a>
@@ -51,9 +51,9 @@
                 <p class="m-0 text-white">Phone: 555-555-1234 <br />Address: 1234 Test <br />Email: Care@WiredBrain.com</p>
             </div>
             <div class="col-md-4">
-                @if (IsSectionDefined("FooterThird"))
+                @if (IsSectionDefined("FooterCustomize"))
                 {
-                    RenderSection("FooterThird");
+                    RenderSection("FooterCustomize");
                 }
                 else
                 {
