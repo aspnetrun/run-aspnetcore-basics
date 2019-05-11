@@ -6,9 +6,6 @@ namespace AspNetRunBasicRealWorld.Entities
     {
         public int Id { get; set; }
 
-        [Required, StringLength(40)]
-        public string Slug { get; set; }
-
         [Required, StringLength(80)]
         public string Name { get; set; }
 

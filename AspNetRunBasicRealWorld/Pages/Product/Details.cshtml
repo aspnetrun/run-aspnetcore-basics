@@ -1,42 +1,50 @@
-﻿@page
+﻿@page "/Product/{productId}"
 @model AspNetRunBasicRealWorld.Pages.Product.DetailsModel
 @{
     ViewData["Title"] = "Details";
 }
 
-<h1>Details</h1>
-
-<div>
-    <h4>Product</h4>
+<div class="container">
+    <h1 class="mt-4 mb-3">
+        @Model.Product.Name
+    </h1>
     <hr />
-    <dl class="row">
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Product.Name)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Product.Name)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Product.Description)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Product.Description)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Product.UnitPrice)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Product.UnitPrice)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Product.Category)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Product.Category.Name)
-        </dd>
-    </dl>
-</div>
-<div>
-    <a asp-page="./Edit" asp-route-productId="@Model.Product.Id">Edit</a> |
-    <a asp-page="./Index">Back to List</a>
+    <h3>A Taste of Autumn.</h3>
+
+    <div class="row">
+        <div class="col-lg-8">
+            <img class="img-fluid rounded" src="~/images/Menu/@Model.Product.ImageFile" alt="">
+            <hr>
+            <p>Available starting at 8:00 AM</p>
+            <hr>
+            <p class="lead">@Model.Product.Summary</p>
+            <blockquote class="blockquote">
+                <p class="mb-0">I feel at home every time I take a bite.</p>
+                <footer class="blockquote-footer">
+                    Actual customer
+                    <cite title="Source Title">Happy Customer</cite>
+                </footer>
+            </blockquote>
+            <p>@Model.Product.Description</p>
+            <hr>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <h5 class="card-header">Nutrition Information</h5>
+                <div class="card-body">
+                    <p>Note: Nutrition information is an estimate only.  We back our goods fresh every day, so nutrition values may vary depending on preparation and serving size.</p>
+                    <ul>
+                        <li>Calories: 300</li>
+                        <li>Total Fat: 25%</li>
+                        <li>Saturated Fat: 15%</li>
+                        <li>Fiber: 20%</li>
+                        <li>Sugar: 25g</li>
+                    </ul>
+                </div>
+            </div>
+            <hr />
+
+            @*@await Component.InvokeAsync("PopularBrews", new { count = 3 })*@
+        </div>
+    </div>
 </div>
