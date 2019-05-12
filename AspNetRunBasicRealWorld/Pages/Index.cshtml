@@ -81,22 +81,13 @@
     <hr class="mb-5">
     <div class="row">
         <div class="col-md-4">
-            <partial name="MobileWidget" model="@("Download Today")" />
+            <partial name="_MobileWidgetPartial" model="@("Download Today")" />
         </div>
         <div class="col-md-4">            
             <vc:popular-products count="1" />
         </div>
         <div class="col-md-4">
-            <div class="card">
-                <div class="card-body">
-                    <h2>Contact Us</h2>
-                    <img style="width: 75%; margin: 0 auto; display: block;" src="~/images/placeholder.png" />
-                    <p>Questions or feedback about anything? We'd love to hear from you.</p>
-                </div>
-                <div class="card-footer">
-                    <a href="#" class="btn btn-success">Contact Us</a>
-                </div>
-            </div>
+            <partial name="_ContactUsPartial" />
         </div>
     </div>
     <hr class="mb-5">
