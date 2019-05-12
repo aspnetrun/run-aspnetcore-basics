@@ -37,6 +37,10 @@ namespace AspNetRunBasicRealWorld.Pages
 
         public async Task<IActionResult> OnPostSubscribeAsync(string address)
         {
+            if (string.IsNullOrWhiteSpace(address))
+            {
+                return Page();
+            }
             await _contactRepository.Subscribe(address);
             return RedirectToPage("Confirmation", "Subscribe");
         }
