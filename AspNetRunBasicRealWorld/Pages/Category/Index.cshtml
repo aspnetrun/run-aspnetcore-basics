@@ -4,44 +4,27 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Category List</h1>
-
-<table class="table table-hover">
-    <thead>
-        <tr>
-            <th scope="col">Id</th>
-            <th scope="col">Name</th>
-            <th scope="col">Description</th>
-        </tr>
-    </thead>
-    <tbody>
+<div class="container">
+    <h1 class="my-4">Category List</h1>
+    <div class="row">
         @foreach (var category in Model.CategoryList)
         {
-            <tr>
-                <th scope="row">@category.Id</th>
-                <td>@category.Name</td>
-                <td>@category.Description</td>
-            </tr>
-        }
-    </tbody>
-</table>
-
-<div class="container">
-    <h1 class="my-4">Three options to keep your brain wired.</h1>
-    <div class="row">
-        <div class="col-md-4 mb-4">
-            <div class="card h-100">
-                <div class="card-image bg-ground">
-                </div>
-                <div class="card-body">
-                    <h2 class="card-title">Coffee</h2>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod tenetur ex natus at dolorem enim! Nesciunt pariatur voluptatem sunt quam eaque, vel, non in id dolore voluptates quos eligendi labore.</p>
-                </div>
-                <div class="card-footer">
-                    <a href="#" class="btn btn-success">Full Menu</a>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-image bg-ground">
+                    </div>
+                    <div class="card-body">
+                        <h2 class="card-title">@category.Name</h2>
+                        <p class="card-text">@category.Description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod tenetur ex natus at dolorem enim! Nesciunt pariatur voluptatem sunt quam eaque, vel, non in id dolore voluptates quos eligendi labore.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="btn btn-success">Full Menu</a>
+                    </div>
                 </div>
             </div>
-        </div>
+        }
+
+
         <div class="col-md-4 mb-4">
             <div class="card h-100">
                 <div class="card-image bg-bagel">
@@ -72,7 +55,7 @@
     <hr class="mb-5">
     <div class="row">
         <div class="col-md-4">
-            <partial name="MobileWidget" model="@("Download Today")" />
+            <partial name="_MobileWidgetPartial" model="@("Download Today")" />
         </div>
         <div class="col-md-4">
             <vc:popular-products count="1" />
