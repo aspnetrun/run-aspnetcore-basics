@@ -14,8 +14,7 @@
         <div class="alert alert-success">@Model.Message</div>
     }
     <div class="row">
-        <div class="col-md-8 mb-4">
-            <p>Life gets busy but we try to respond with 24 hours.  If you have a more immediate question, give us a ring using the number over on the right. We are crazy friendly!</p>
+        <div class="col-md-8 mb-4">            
             <br />
             <form asp-page="Contact" method="post" name="sentMessage" id="contactForm">
                 <div class="control-group form-group">
@@ -66,19 +65,6 @@
             <hr />
             <partial name="_MobileWidgetPartial" model="@("Get the app!")" />
             <hr />
-            <div>
-                <h3>Contact Details</h3>
-                <p>
-                    1234 Wired Brain Blvd
-                    <br>Awesome City, MM 55555
-                    <br>
-                </p>
-                <p>
-                    <span title="Phone">Phone</span>: (123) 456-7890<br />
-                    <span title="Hours">Hours</span>: Monday - Friday: 6:00 AM to 9:00 PM
-                </p>
-            </div>
-            <img style="width: 100%" src="~/images/placeholder.png" />
         </div>
     </div>
 </div>
