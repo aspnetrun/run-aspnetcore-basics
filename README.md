@@ -8,3 +8,8 @@ To be implemented;
 * authorization
 * aspnet features - viewComponent, etc..
 * slugification
+
+### Whats Include In This Repo
+* bootstrap4 theme implementation
+* asp.net core built-in dependency injection
+* identity and identity configuration
