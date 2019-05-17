@@ -6,7 +6,7 @@
 
 <div class="container">
     <h1 class="mt-4 mb-3">
-        Our Menu
+        Our Products
     </h1>
     <hr />
 
@@ -23,14 +23,13 @@
         </div>
     </form>
 
-    <h3>Brain food, comfort food..we have it all.</h3>
-    <p>Our coffee is imported from fair trade establishments throughout the world.  Our food is made with all natural ingredients and sourced from local farms.  We're committed to sustainability!</p>
+   
     <div class="row">
         @foreach (var product in Model.ProductList)
         {
             <div class="col-lg-4 col-sm-6 portfolio-item">
                 <div class="card h-100">
-                    <a asp-page="./Details" asp-route-productId="@product.Id"><img asp-append-version="true" class="card-img-top" src="~/images/menu/@product.ImageFile" alt=""></a>
+                    <a asp-page="./Details" asp-route-productId="@product.Id"><img asp-append-version="true" class="card-img-top" src="~/images/product/@product.ImageFile" alt=""></a>
                     <div class="card-body">
                         <h4 class="card-title">
                             <a asp-page="./Details" asp-route-productId="@product.Id" class="color-main">@product.Name</a>
@@ -38,7 +37,7 @@
                         <p class="card-text">@product.Description</p>
                     </div>
                     <div class="card-footer">
-                        <a asp-page="./Details" asp-route-productId="@product.Id" class="btn btn-success w-100">Details & Nutrition</a>
+                        <a asp-page="./Details" asp-route-productId="@product.Id" class="btn btn-success w-100">Go Details</a>
                     </div>
                 </div>
             </div>
@@ -70,7 +69,7 @@
 </div>
 
 @section FooterCustomize {
-    <p><a class="text-white" href="#">Allergen Information</a></p>
-    <p><a class="text-white" href="#">Ingredient Information</a></p>
-    <p><a class="text-white" href="#">Our Food Partners</a></p>
+    <p><a class="text-white" href="#">Computers</a></p>
+    <p><a class="text-white" href="#">Smart Home Products</a></p>
+    <p><a class="text-white" href="#">Movies & Television</a></p>
 }
