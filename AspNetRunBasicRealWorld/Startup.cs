@@ -41,13 +41,13 @@ namespace AspNetRunBasicRealWorld
         {
             #region database services
 
-            //// use in-memory database
-            //services.AddDbContext<AspnetRunContext>(c =>
-            //    c.UseInMemoryDatabase("AspnetRunConnection"));
-
-            // add database dependecy
+            // use in-memory database
             services.AddDbContext<AspnetRunContext>(c =>
-                c.UseSqlServer(Configuration.GetConnectionString("AspnetRunConnection")));
+                c.UseInMemoryDatabase("AspnetRunConnection"));
+
+            //// add database dependecy
+            //services.AddDbContext<AspnetRunContext>(c =>
+            //    c.UseSqlServer(Configuration.GetConnectionString("AspnetRunConnection")));
 
             #endregion
 
