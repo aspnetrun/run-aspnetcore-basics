@@ -107,7 +107,7 @@ namespace AspNetRunBasicRealWorld.Data
                 },
                 new Product()
                 {
-                    Name = "Samsung 10",
+                    Name = "HTC U11+ Plus",
                     Summary = "This phone is the company's biggest change to its flagship smartphone in years. It includes a borderless, OLED screen, wireless charging and facial recognition cameras.",
                     Description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.",
                     ImageFile = "product-5.png",
@@ -115,7 +115,7 @@ namespace AspNetRunBasicRealWorld.Data
                 },
                 new Product()
                 {
-                    Name = "Samsung 10",
+                    Name = "LG G7 ThinQ",
                     Summary = "This phone is the company's biggest change to its flagship smartphone in years. It includes a borderless, OLED screen, wireless charging and facial recognition cameras.",
                     Description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.",
                     ImageFile = "product-6.png",
@@ -123,7 +123,7 @@ namespace AspNetRunBasicRealWorld.Data
                 },
                 new Product()
                 {
-                    Name = "Samsung 10",
+                    Name = "OnePlus 6",
                     Summary = "This phone is the company's biggest change to its flagship smartphone in years. It includes a borderless, OLED screen, wireless charging and facial recognition cameras.",
                     Description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.",
                     ImageFile = "product-7.png",

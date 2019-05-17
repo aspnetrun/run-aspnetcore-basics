@@ -1,12 +1,12 @@
 ﻿@page
 @model ContactModel
 @{
+    ViewData["Title"] = "Contact Us";
 }
 
 <div class="container">
     <h1 class="mt-4 mb-3">
-        Contact
-        <small>We'd love to hear from you.</small>
+        Contact Us        
     </h1>
     <hr />
     @if (!string.IsNullOrEmpty(Model.Message))
@@ -64,7 +64,7 @@
             </div>
             <hr />
             <partial name="_MobileWidgetPartial" model="@("Get the app!")" />
-            <hr />
+            <h1 />
         </div>
     </div>
 </div>
