@@ -27,6 +27,8 @@ namespace AspNetRunBasicRealWorld.Migrations
 
                     b.Property<string>("Description");
 
+                    b.Property<string>("ImageName");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(80);

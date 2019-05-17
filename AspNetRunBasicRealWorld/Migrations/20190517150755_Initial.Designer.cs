@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AspNetRunBasicRealWorld.Migrations
 {
     [DbContext(typeof(AspnetRunContext))]
-    [Migration("20190511153520_Contact_Added")]
-    partial class Contact_Added
+    [Migration("20190517150755_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -28,6 +28,8 @@ namespace AspNetRunBasicRealWorld.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Description");
+
+                    b.Property<string>("ImageName");
 
                     b.Property<string>("Name")
                         .IsRequired()
