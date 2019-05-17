@@ -11,46 +11,19 @@
         {
             <div class="col-md-4 mb-4">
                 <div class="card h-100">
-                    <div class="card-image @category.Name bg-ground">
+                    <div class="card-image bg-@category.ImageName">                        
                     </div>
                     <div class="card-body">
                         <h2 class="card-title">@category.Name</h2>
-                        <p class="card-text">@category.Description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod tenetur ex natus at dolorem enim! Nesciunt pariatur voluptatem sunt quam eaque, vel, non in id dolore voluptates quos eligendi labore.</p>
+                        <p class="card-text">@category.Description</p>
                     </div>
-                    <div class="card-footer">
-                        <a href="#" class="btn btn-success">Full Menu</a>
+                    <div class="card-footer">                        
+                        <a asp-area="" asp-page="/Product/Index" class="btn btn-success">Full Menu</a>
                     </div>
                 </div>
             </div>
         }
 
-
-        <div class="col-md-4 mb-4">
-            <div class="card h-100">
-                <div class="card-image bg-bagel">
-                </div>
-                <div class="card-body">
-                    <h2 class="card-title">Carbs</h2>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod tenetur ex natus at dolorem enim! Nesciunt pariatur voluptatem sunt quam eaque, vel, non in id dolore voluptates quos eligendi labore.</p>
-                </div>
-                <div class="card-footer">
-                    <a href="#" class="btn btn-success">Full Menu</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4 mb-4">
-            <div class="card h-100">
-                <div class="card-image bg-table">
-                </div>
-                <div class="card-body">
-                    <h2 class="card-title">Community</h2>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod tenetur ex natus at dolorem enim! Nesciunt pariatur voluptatem sunt quam eaque, vel, non in id dolore voluptates quos eligendi labore.</p>
-                </div>
-                <div class="card-footer">
-                    <a href="#" class="btn btn-success">Get Involved</a>
-                </div>
-            </div>
-        </div>
     </div>
     <hr class="mb-5">
     <div class="row">

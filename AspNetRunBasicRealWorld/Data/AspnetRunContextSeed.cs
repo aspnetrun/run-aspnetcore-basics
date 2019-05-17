@@ -48,8 +48,24 @@ namespace AspNetRunBasicRealWorld.Data
         {
             return new List<Category>()
             {
-                new Category() { Name = "Phone", Description = "Smart Phones" },
-                new Category() { Name = "TV", Description = "Television" }
+                new Category()
+                {
+                    Name = "White Appliances",
+                    Description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat.",
+                    ImageName = "one"
+                },
+                new Category()
+                {
+                    Name = "Smart Watches",
+                    Description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat.",                    
+                    ImageName = "two"
+                },
+                new Category()
+                {
+                    Name = "Home & Kitchen",
+                    Description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat.",                    
+                    ImageName = "tree"
+                }
             };
         }
 
