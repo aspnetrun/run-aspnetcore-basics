@@ -11,5 +11,5 @@ To be implemented;
 
 ### Whats Include In This Repo
 * bootstrap4 theme implementation
-* asp.net core in-built dependency injection
+* asp.net core built-in dependency injection
 * identity and identity configuration
