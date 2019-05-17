@@ -57,19 +57,19 @@ body {
     height: 250px;
 }
 
-.bg-ground {
-    background-image: url("../images/ground.jpg");
+.bg-one {
+    background-image: url("../images/img-1.jpg");
     background-size: cover;
 }
 
-.bg-bagel {
-    background-image: url("../images/bagel.jpg");
+.bg-two {
+    background-image: url("../images/img-2.jpg");
     background-size: cover;
     background-position-y: -75px;
 }
 
-.bg-table {
-    background-image: url("../images/table.jpg");
+.bg-tree {
+    background-image: url("../images/img-3.jpg");
     background-size: cover;
     background-position-y: -110px;
 }
