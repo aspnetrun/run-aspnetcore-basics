@@ -5,7 +5,7 @@
 }
 
 <div class="container">
-    <h1 class="my-4">Category List</h1>
+    <h1 class="my-4"></h1>
     <div class="row">
         @foreach (var category in Model.CategoryList)
         {
@@ -18,7 +18,7 @@
                         <p class="card-text">@category.Description</p>
                     </div>
                     <div class="card-footer">
-                        <a asp-area="" asp-page="/Product/Index" class="btn btn-success">Full Menu</a>
+                        <a asp-area="" asp-page="/Product/Index" class="btn btn-success">All Products</a>
                     </div>
                 </div>
             </div>
@@ -30,7 +30,7 @@
             <partial name="_MobileWidgetPartial" model="@("Download Today")" />
         </div>
         <div class="col-md-4">
-            <vc:popular-products count="1" />
+            <vc:popular-products count="2" />
         </div>
         <div class="col-md-4">
             <div class="card">
