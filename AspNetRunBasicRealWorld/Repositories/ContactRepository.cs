@@ -23,6 +23,7 @@ namespace AspNetRunBasicRealWorld.Repositories
 
         public async Task<Contact> Subscribe(string address)
         {
+            // implement your business logic
             var newContact = new Contact();
             newContact.Email = address;
             newContact.Message = address;

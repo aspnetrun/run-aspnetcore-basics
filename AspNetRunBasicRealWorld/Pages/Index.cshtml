@@ -38,45 +38,22 @@
 <div class="container">
     <h1 class="my-4"></h1>
     <div class="row">
-        <div class="col-md-4 mb-4">
-            <div class="card h-100">
-                <div class="card-image bg-one">
-                </div>
-                <div class="card-body">
-                    <h2 class="card-title">White Appliances</h2>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod tenetur ex natus at dolorem enim! Nesciunt pariatur voluptatem sunt quam eaque, vel, non in id dolore voluptates quos eligendi labore.</p>
-                </div>
-                <div class="card-footer">
-                    <a asp-area="" asp-page="/Category/Index" class="btn btn-success">Full Menu</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4 mb-4">
-            <div class="card h-100">
-                <div class="card-image bg-two">
-                </div>
-                <div class="card-body">
-                    <h2 class="card-title">Smart Watches</h2>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod tenetur ex natus at dolorem enim! Nesciunt pariatur voluptatem sunt quam eaque, vel, non in id dolore voluptates quos eligendi labore.</p>
-                </div>
-                <div class="card-footer">
-                    <a asp-area="" asp-page="/Category/Index" class="btn btn-success">Full Menu</a>
+        @foreach (var category in Model.CategoryList)
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-image bg-@category.ImageName">
+                    </div>
+                    <div class="card-body">
+                        <h2 class="card-title">@category.Name</h2>
+                        <p class="card-text">@category.Description</p>
+                    </div>
+                    <div class="card-footer">
+                        <a asp-area="" asp-page="/Product/Index" class="btn btn-success">Full Menu</a>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col-md-4 mb-4">
-            <div class="card h-100">
-                <div class="card-image bg-tree">
-                </div>
-                <div class="card-body">
-                    <h2 class="card-title">Home Kitchen</h2>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod tenetur ex natus at dolorem enim! Nesciunt pariatur voluptatem sunt quam eaque, vel, non in id dolore voluptates quos eligendi labore.</p>
-                </div>
-                <div class="card-footer">
-                    <a asp-area="" asp-page="/Contact" class="btn btn-success">Full Menu</a>
-                </div>
-            </div>
-        </div>
+        }
     </div>
     <hr class="mb-5">
     <div class="row">
