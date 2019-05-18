@@ -23,7 +23,7 @@ These repositories are **updated regularly**. We are following Microsoft Web Tec
 # run-aspnetcore-basic-realworld
 Here is **implementation of aspnetrun-core-basic template** on real-world **basic e-commerce web application** project;
 
-![Recordit GIF](http://g.recordit.co/77otQjOcie.gif)
+![Recordit GIF](http://g.recordit.co/RdO0bFztPK.gif)
 
 AspnetRunBasic has only **one solution** and into this solution only **one web application project** which include all components of project structure. The idea is that **fast implementation, minimum development, bootstrap your idea, create Minimum Viable Product (MVP), idea validation, startup development implementation** for a **limited time** and **limited resources** with using latest asp.net core and entity framework core. 
 
