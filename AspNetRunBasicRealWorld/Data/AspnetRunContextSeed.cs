@@ -120,14 +120,6 @@ namespace AspNetRunBasicRealWorld.Data
                     Description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.",
                     ImageFile = "product-6.png",
                     CategoryId = 1
-                },
-                new Product()
-                {
-                    Name = "OnePlus 6",
-                    Summary = "This phone is the company's biggest change to its flagship smartphone in years. It includes a borderless, OLED screen, wireless charging and facial recognition cameras.",
-                    Description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.",
-                    ImageFile = "product-7.png",
-                    CategoryId = 1
                 }
             };
         }
