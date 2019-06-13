@@ -1,4 +1,3 @@
-# run-aspnetcore-basic-realworld
 Here is **implementation of aspnetrun-core-basic template** on real-world **basic e-commerce web application** project;
 
 ![Recordit GIF](http://g.recordit.co/RdO0bFztPK.gif)
