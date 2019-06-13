@@ -1,3 +1,10 @@
+# run-aspnetcore-basic-realworld
+Here is **implementation of aspnetrun-core-basic template** on real-world **basic e-commerce web application** project;
+
+![Recordit GIF](http://g.recordit.co/RdO0bFztPK.gif)
+
+AspnetRunBasic has only **one solution** and into this solution only **one web application project** which include all components of project structure. The idea is that **fast implementation, minimum development, bootstrap your idea, create Minimum Viable Product (MVP), idea validation, startup development implementation** for a **limited time** and **limited resources** with using latest asp.net core and entity framework core. 
+
 # What is AspnetRun ? 
 A **starter kit** for your next **ASP.NET Core** web application. Boilerplate for **ASP.NET Core reference application** with **Entity Framework Core**, demonstrating a layered application architecture with DDD best practices. Implements NLayer **Hexagonal architecture** (Core, Application, Infrastructure and Presentation Layers) and **Domain Driven Design** (Entities, Repositories, Domain/Application Services, DTO's...) 
 and aimed to be a **Clean Architecture**, with applying **SOLID principles** in order to use for a project template. 
@@ -19,13 +26,6 @@ And there are crucial repositories which are **implemented base repository** and
 * **[run-angular-realworld](https://github.com/aspnetrun/run-angular-realworld)** - implemented run-angular repository and build **sample of eCommerce reference application** on Single Page Web Application(SPA) architecture using **ASP.NET Core + Angular**.
 
 These repositories are **updated regularly**. We are following Microsoft Web Technologies very closely so we will update all these repositories accordingly with **Microsoft Web Application stacks**.
-
-# run-aspnetcore-basic-realworld
-Here is **implementation of aspnetrun-core-basic template** on real-world **basic e-commerce web application** project;
-
-![Recordit GIF](http://g.recordit.co/RdO0bFztPK.gif)
-
-AspnetRunBasic has only **one solution** and into this solution only **one web application project** which include all components of project structure. The idea is that **fast implementation, minimum development, bootstrap your idea, create Minimum Viable Product (MVP), idea validation, startup development implementation** for a **limited time** and **limited resources** with using latest asp.net core and entity framework core. 
 
 ## Whats Including In This Repository
 We have implemented below **features over the run-aspnetcore-basic boilerplate template**. You can change **real-world features** as your business requirements;
