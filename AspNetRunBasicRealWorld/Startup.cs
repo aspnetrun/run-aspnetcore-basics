@@ -6,10 +6,11 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI;
-using Microsoft.AspNetCore.Mvc;
+
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 
 namespace AspNetRunBasicRealWorld
 {
@@ -34,7 +35,7 @@ namespace AspNetRunBasicRealWorld
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddRazorPages();
         }
 
         private void ConfigureAspnetRunServices(IServiceCollection services)
@@ -54,7 +55,7 @@ namespace AspNetRunBasicRealWorld
             #region identity services
 
             services.AddDefaultIdentity<IdentityUser>()
-                 .AddDefaultUI(UIFramework.Bootstrap4)
+                 .AddDefaultUI()
                  .AddEntityFrameworkStores<AspnetRunContext>();
 
             services.Configure<IdentityOptions>(options =>
@@ -80,7 +81,7 @@ namespace AspNetRunBasicRealWorld
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
             {
@@ -96,9 +97,14 @@ namespace AspNetRunBasicRealWorld
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
-            app.UseAuthentication();            
+            app.UseAuthentication();
+            app.UseRouting();
+            app.UseAuthorization();
 
-            app.UseMvc();
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapRazorPages();
+            });
         }
     }
 }
