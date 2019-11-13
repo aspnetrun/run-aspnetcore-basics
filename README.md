@@ -13,26 +13,24 @@ You can check full repository documentations and step by step development of **[
 
 # AspnetRun Repositories
 Here you can find all of the **aspnetrun repositories from easy to difficult**, Also this list can be track a **learning path** of asp.net core respectively;
-* **[run-aspnetcore-basic](https://github.com/aspnetrun/run-aspnetcore-basic)** - intented to building fastest ASP.NET Core Default Web Application template. This solution **only one solution one project** for **idea generation** with Asp.Net Core.
-* **[run-aspnetcore](https://github.com/aspnetrun/run-aspnetcore)** - intented to building Multi-Page Web Applications(MPA) using ASP.NET Core & EF.Core in **Clean Architecture** with default aspnet core server-side rendering approach.
-* **[run-aspnetcore-spa](https://github.com/aspnetrun/run-aspnetcore-spa)** - intented to building **Single-Page Web Applications(SPA)** using only ASP.NET Core **without any frontend framework**. This comes with **Blazor** framework in asp.net core 3.x.
-* **[run-angular](https://github.com/aspnetrun/run-angular)** - intented to building Single-Page Web Applications(SPA) using ASP.NET Core & EF.Core, Web API Project and **Angular** for frontend framework.
+* **[run-aspnetcore-basic](https://github.com/aspnetrun/run-aspnetcore-basic)** - intended to building fastest ASP.NET Core Default Web Application template. This solution **only one solution one project** for **idea generation** with Asp.Net Core. 
+* **[run-aspnetcore](https://github.com/aspnetrun/run-aspnetcore)** - intended to building Multi-Page Web Applications(MPA) using ASP.NET Core & EF.Core in **Clean Architecture** with default aspnet core server-side rendering approach. 
+* **[run-aspnetcore-angular](https://github.com/aspnetrun/run-angular)** - intended to building Single-Page Web Applications(SPA) using ASP.NET Core & EF.Core, Web API Project and **Angular** for frontend framework.
 
 And there are crucial repositories which are **implemented base repository** and **applying real-world examples** with developing new enterprice features for example Identity, Paging, Localization etc..
 * **[run-aspnetcore-basic-realworld](https://github.com/aspnetrun/run-aspnetcore-basic-realworld)** - implemented this repository and build **sample of eCommerce reference application** on Default ASP.NET Core in a **one solution one project for fastest idea implementations**. ***YOU ARE HERE.***
 * **[run-aspnetcore-realworld](https://github.com/aspnetrun/run-aspnetcore-realworld)** - implemented run-aspnetcore repository and build **sample of eCommerce reference application** on Multi-Page Web Applications(MPA) using ASP.NET Core Razor Pages templates.
-* **[run-aspnetcore-spa-realworld](https://github.com/aspnetrun/run-aspnetcore-spa-realworld)** - implemented run-aspnetcore-spa repository and build **sample of eCommerce reference application** on **Single-Page Web Applications(SPA)** using ASP.NET Core Blazor Pages templates.
-* **[run-angular-realworld](https://github.com/aspnetrun/run-angular-realworld)** - implemented run-angular repository and build **sample of eCommerce reference application** on Single Page Web Application(SPA) architecture using **ASP.NET Core + Angular**.
+* **[run-aspnetcore-angular-realworld](https://github.com/aspnetrun/run-angular-realworld)** - implemented run-angular repository and build **sample of eCommerce reference application** on Single Page Web Application(SPA) architecture using **ASP.NET Core + Angular**.
 
 These repositories are **updated regularly**. We are following Microsoft Web Technologies very closely so we will update all these repositories accordingly with **Microsoft Web Application stacks**.
 
 ## Whats Including In This Repository
 We have implemented below **features over the run-aspnetcore-basic boilerplate template**. You can change **real-world features** as your business requirements;
-* bootstrap4 theme implementation
-* asp.net core built-in dependency injection
-* identity and identity configuration
-* authorization for Products Page
-* aspnet core razor tools - View Components, partial Views, Tag Helpers, Model Bindings and Validations, Razor Sections etc..   
+* Bootstrap4 theme implementation
+* Asp.net core built-in dependency injection
+* Identity and identity configuration
+* Authorization for Products Page
+* Aspnet core razor tools - View Components, partial Views, Tag Helpers, Model Bindings and Validations, Razor Sections etc..   
 
 ## Give a Star! :star:
 If you liked the project or if AspnetRun helped you, please **give a star**. And also please **fork** this repository and send us **pull-requests**. If you find any problem please open **issue**.
@@ -44,8 +42,8 @@ Use these instructions to get the project up and running.
 You will need the following tools:
 
 * [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/)
-* [.Net Core 2.2 or later](https://dotnet.microsoft.com/download/dotnet-core/2.2)
-* EF Core 2.2 or later
+* [.Net Core 3.0 or later](https://dotnet.microsoft.com/download/dotnet-core/2.2)
+* EF Core 3.0 or later
 
 ### Installing
 Follow these steps to get your development environment set up:
@@ -238,9 +236,9 @@ ASP.NET Core application must include Startup class. It is like Global.asax in t
 
 
 ## Technologies
-* .NET Core 2.2
-* ASP.NET Core 2.2
-* Entity Framework Core 2.2 
+* .NET Core 3.0
+* ASP.NET Core 3.0
+* Entity Framework Core 3.0 
 * .NET Core Native DI
 * Razor Pages
 * AutoMapper
