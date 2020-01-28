@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace AspNetRunBasicRealWorld.Pages.Product
 {
-    [Authorize]
+    //[Authorize]
     public class IndexModel : PageModel
     {
         private readonly IProductRepository _productRepository;

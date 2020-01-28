@@ -16,11 +16,13 @@ namespace AspNetRunBasicRealWorld.Pages
             _productRepository = productRepository ?? throw new ArgumentNullException(nameof(productRepository));
         }
 
-        public IEnumerable<Entities.Category> CategoryList { get; set; } = new List<Entities.Category>();
+        [BindProperty(SupportsGet = true)]
+        public string SearchTerm { get; set; }
+        public IEnumerable<Entities.Product> ProductList { get; set; } = new List<Entities.Product>();
 
         public async Task<IActionResult> OnGetAsync()
         {
-            CategoryList = await _productRepository.GetCategories();
+            ProductList = await _productRepository.GetProductByNameAsync(SearchTerm);
             return Page();
         }
     }
