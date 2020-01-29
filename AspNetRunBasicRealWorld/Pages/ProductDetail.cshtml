@@ -1,5 +1,5 @@
 ﻿@page "/Product/{productId}"
-@model AspNetRunBasicRealWorld.Pages.Product.DetailsModel
+@model AspNetRunBasicRealWorld.ProductDetailModel
 @{
     ViewData["Title"] = "Product Details";
 }
@@ -8,7 +8,7 @@
     <h1 class="mt-4 mb-3">
         @Model.Product.Name
     </h1>
-    <hr />    
+    <hr />
     <div class="row">
         <div class="col-lg-8">
             <img class="img-fluid rounded" src="~/images/product/@Model.Product.ImageFile" alt="">
@@ -41,3 +41,11 @@
         </div>
     </div>
 </div>
+
+
+@section FooterCustomize {
+    <p><a class="text-white" href="#">Computers</a></p>
+    <p><a class="text-white" href="#">Smart Home Products</a></p>
+    <p><a class="text-white" href="#">Movies & Television</a></p>
+}
+

@@ -56,15 +56,15 @@
         {
             <div class="col-lg-4 col-sm-6 portfolio-item">
                 <div class="card h-100">
-                    <a asp-page="./Details" asp-route-productId="@product.Id"><img asp-append-version="true" class="card-img-top" src="~/images/product/@product.ImageFile" alt=""></a>
+                    <a asp-page="Product" asp-route-productId="@product.Id"><img asp-append-version="true" class="card-img-top" src="~/images/product/@product.ImageFile" alt=""></a>
                     <div class="card-body">
                         <h4 class="card-title">
-                            <a asp-page="./Details" asp-route-productId="@product.Id" class="color-main">@product.Name</a>
+                            <a asp-page="Product" asp-route-productId="@product.Id" class="color-main">@product.Name</a>
                         </h4>
                         <p class="card-text">@product.Summary</p>
                     </div>
                     <div class="card-footer">
-                        <a asp-page="./Details" asp-route-productId="@product.Id" class="btn btn-success w-100">Go Details</a>
+                        <a asp-page="Product" asp-route-productId="@product.Id" class="btn btn-success w-100">Add to Cart</a>
                     </div>
                 </div>
             </div>

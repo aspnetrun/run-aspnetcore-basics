@@ -2,31 +2,27 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using AspNetRunBasicRealWorld.Repositories;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace AspNetRunBasicRealWorld.Pages.Product
+namespace AspNetRunBasicRealWorld
 {
-    //[Authorize]
-    public class IndexModel : PageModel
+    public class CategoryModel : PageModel
     {
         private readonly IProductRepository _productRepository;
 
-        public IndexModel(IProductRepository productRepository)
+        public CategoryModel(IProductRepository productRepository)
         {
             _productRepository = productRepository ?? throw new ArgumentNullException(nameof(productRepository));
         }
 
-        public IEnumerable<Entities.Product> ProductList { get; set; } = new List<Entities.Product>();
-
-        [BindProperty(SupportsGet = true)]
-        public string SearchTerm { get; set; }
+        public IEnumerable<Entities.Category> CategoryList { get; set; } = new List<Entities.Category>();
 
         public async Task<IActionResult> OnGetAsync()
         {
-            ProductList = await _productRepository.GetProductByNameAsync(SearchTerm);
+            CategoryList = await _productRepository.GetCategories();
             return Page();
         }
+        
     }
 }

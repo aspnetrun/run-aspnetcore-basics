@@ -1,5 +1,5 @@
 ﻿@page
-@model AspNetRunBasicRealWorld.Pages.Category.IndexModel
+@model AspNetRunBasicRealWorld.CategoryModel
 @{
     ViewData["Title"] = "Categories";
 }
@@ -23,8 +23,8 @@
                 </div>
             </div>
         }
-    </div>
-    <hr class="mb-5">
+    </div>    
+    <hr />
     <div class="row">
         <div class="col-md-4">
             <partial name="_MobileWidgetPartial" model="@("Download Today")" />
@@ -33,11 +33,8 @@
             <vc:popular-products count="2" />
         </div>
         <div class="col-md-4">
-            <partial name="_ContactUsPartial" />        
+            <partial name="_ContactUsPartial" />
         </div>
     </div>
     <hr class="mb-5">
 </div>
-
-
-

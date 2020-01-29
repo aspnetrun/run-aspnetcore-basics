@@ -4,13 +4,13 @@ using AspNetRunBasicRealWorld.Repositories;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace AspNetRunBasicRealWorld.Pages.Product
+namespace AspNetRunBasicRealWorld
 {
-    public class DetailsModel : PageModel
+    public class ProductDetailModel : PageModel
     {
         private readonly IProductRepository _productRepository;
 
-        public DetailsModel(IProductRepository productRepository)
+        public ProductDetailModel(IProductRepository productRepository)
         {
             _productRepository = productRepository ?? throw new ArgumentNullException(nameof(productRepository));
         }
@@ -30,6 +30,6 @@ namespace AspNetRunBasicRealWorld.Pages.Product
                 return NotFound();
             }
             return Page();
-        }
+        }        
     }
 }

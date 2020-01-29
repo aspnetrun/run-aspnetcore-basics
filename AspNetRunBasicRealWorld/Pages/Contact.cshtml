@@ -4,67 +4,67 @@
     ViewData["Title"] = "Contact Us";
 }
 
-<div class="container">
-    <h1 class="mt-4 mb-3">
-        Contact Us        
-    </h1>
-    <hr />
-    @if (!string.IsNullOrEmpty(Model.Message))
-    {
-        <div class="alert alert-success">@Model.Message</div>
-    }
-    <div class="row">
-        <div class="col-md-8 mb-4">            
-            <br />
-            <form asp-page="Contact" method="post" name="sentMessage" id="contactForm">
-                <div class="control-group form-group">
-                    <div class="controls">
-                        <label asp-for="Contact.Name">Name:</label>
-                        <input asp-for="Contact.Name" class="form-control">
-                        <span asp-validation-for="Contact.Name" class="alert-danger"></span>
-                    </div>
-                </div>
-                <div class="control-group form-group">
-                    <div class="controls">
-                        <label asp-for="Contact.Phone">Phone:</label>
-                        <input asp-for="Contact.Phone" class="form-control">
-                        <span asp-validation-for="Contact.Phone" class="alert-danger"></span>
-                    </div>
-                </div>
-                <div class="control-group form-group">
-                    <div class="controls">
-                        <label asp-for="Contact.Email">Email:</label>
-                        <input asp-for="Contact.Email" class="form-control">
-                        <span asp-validation-for="Contact.Email" class="alert-danger"></span>
-                    </div>
-                </div>
-                <div class="control-group form-group">
-                    <div class="controls">
-                        <label asp-for="Contact.Message">Message:</label>
-                        <textarea asp-for="Contact.Message" rows="10" cols="100" class="form-control"></textarea>
-                        <span asp-validation-for="Contact.Message" class="alert-danger"></span>
-                    </div>
-                </div>
-                <div id="success"></div>
-                <button type="submit" class="btn btn-success" id="sendMessageButton">Send Message!</button>
-            </form>
-        </div>
-        <div class="col-md-4">
-            <div>
-                <h3>Keep in Touch</h3>
-                <p>Sign up for our mailing list - no spam, we promise.</p>
-                <form asp-page-handler="Subscribe">
+    <div class="container">        
+        <h1 class="mt-4 mb-3">
+            Contact Us
+        </h1>
+        <hr />
+        @if (!string.IsNullOrEmpty(Model.Message))
+        {
+            <div class="alert alert-success">@Model.Message</div>
+        }
+        <div class="row">
+            <div class="col-md-8 mb-4">
+                <br />
+                <form asp-page="Contact" method="post" name="sentMessage" id="contactForm">
                     <div class="control-group form-group">
-                        <input name="address" type="text" class="form-control" placeholder="Email" />
+                        <div class="controls">
+                            <label asp-for="Contact.Name">Name:</label>
+                            <input asp-for="Contact.Name" class="form-control">
+                            <span asp-validation-for="Contact.Name" class="alert-danger"></span>
+                        </div>
                     </div>
                     <div class="control-group form-group">
-                        <input type="submit" class="btn btn-success" value="Join" />
+                        <div class="controls">
+                            <label asp-for="Contact.Phone">Phone:</label>
+                            <input asp-for="Contact.Phone" class="form-control">
+                            <span asp-validation-for="Contact.Phone" class="alert-danger"></span>
+                        </div>
                     </div>
+                    <div class="control-group form-group">
+                        <div class="controls">
+                            <label asp-for="Contact.Email">Email:</label>
+                            <input asp-for="Contact.Email" class="form-control">
+                            <span asp-validation-for="Contact.Email" class="alert-danger"></span>
+                        </div>
+                    </div>
+                    <div class="control-group form-group">
+                        <div class="controls">
+                            <label asp-for="Contact.Message">Message:</label>
+                            <textarea asp-for="Contact.Message" rows="10" cols="100" class="form-control"></textarea>
+                            <span asp-validation-for="Contact.Message" class="alert-danger"></span>
+                        </div>
+                    </div>
+                    <div id="success"></div>
+                    <button type="submit" class="btn btn-success" id="sendMessageButton">Send Message!</button>
                 </form>
             </div>
-            <hr />
-            <partial name="_MobileWidgetPartial" model="@("Get the app!")" />
-            <h1 />
+            <div class="col-md-4">
+                <div>
+                    <h3>Keep in Touch</h3>
+                    <p>Sign up for our mailing list - no spam, we promise.</p>
+                    <form asp-page-handler="Subscribe">
+                        <div class="control-group form-group">
+                            <input name="address" type="text" class="form-control" placeholder="Email" />
+                        </div>
+                        <div class="control-group form-group">
+                            <input type="submit" class="btn btn-success" value="Join" />
+                        </div>
+                    </form>
+                </div>
+                <hr />
+                <partial name="_MobileWidgetPartial" model="@("Get the app!")" />
+                <h1 />
+            </div>
         </div>
     </div>
-</div>
