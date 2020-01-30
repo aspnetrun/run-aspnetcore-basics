@@ -30,6 +30,6 @@ namespace AspNetRunBasicRealWorld
                 return NotFound();
             }
             return Page();
-        }        
+        }
     }
 }
