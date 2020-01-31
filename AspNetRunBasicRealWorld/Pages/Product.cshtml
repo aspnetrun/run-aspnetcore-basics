@@ -3,7 +3,8 @@
 @{
     ViewData["Title"] = "Product";
 }
-    
+
+
     <div class="container">
         <h1 class="my-4"></h1>
         <div class="row">
@@ -23,27 +24,7 @@
 
                     @foreach (var product in Model.ProductList)
                     {
-                        <div class="col-12 col-md-6 col-lg-4">
-                            <div class="card">
-                                <a asp-page="ProductDetail" asp-route-productId="@product.Id"><img asp-append-version="true" class="card-img-top" src="~/images/product/@product.ImageFile" alt=""></a>                                
-                                <div class="card-body">
-                                    <h4 class="card-title">
-                                        <a asp-page="ProductDetail" asp-route-productId="@product.Id" class="color-main">@product.Name</a>
-                                    </h4>
-                                    <p class="card-text">@product.Summary</p>                                  
-                                    <div class="card-footer">
-                                        <div class="row">
-                                            <div class="col">
-                                                <p class="btn btn-danger">@product.Price</p>
-                                            </div>
-                                            <div class="col">
-                                                <a asp-page="Product" asp-route-productId="@product.Id" class="btn btn-success btn-block">Add to Cart</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <partial name="_ProductItemPartial" model="@product" />
                     }
 
                     
