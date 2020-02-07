@@ -1,4 +1,5 @@
 using AspnetRunBasics.Data;
+using AspnetRunBasics.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -29,6 +30,16 @@ namespace AspnetRunBasics
             // add database dependecy
             services.AddDbContext<AspnetRunContext>(c =>
                 c.UseSqlServer(Configuration.GetConnectionString("AspnetRunConnection")));
+
+            #endregion            
+
+            #region project services
+
+            // add repository dependecy
+            services.AddScoped<IProductRepository, ProductRepository>();
+            services.AddScoped<ICartRepository, CartRepository>();
+            services.AddScoped<IOrderRepository, OrderRepository>();
+            services.AddScoped<IContactRepository, ContactRepository>();
 
             #endregion
 
