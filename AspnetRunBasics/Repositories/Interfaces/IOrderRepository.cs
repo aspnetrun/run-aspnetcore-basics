@@ -5,6 +5,6 @@ namespace AspnetRunBasics.Repositories
 {
     public interface IOrderRepository
     {
-        Task<Order> CheckOut(Order orderModel);
+        Task<Order> CheckOut(Order order);
     }
 }
