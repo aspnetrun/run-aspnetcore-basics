@@ -1,25 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
+using AspnetRunBasics.Repositories;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.Extensions.Logging;
 
 namespace AspnetRunBasics.Pages
 {
     public class IndexModel : PageModel
     {
-        private readonly ILogger<IndexModel> _logger;
+        private readonly IProductRepository _productRepository;
 
-        public IndexModel(ILogger<IndexModel> logger)
+        public IndexModel(IProductRepository productRepository)
         {
-            _logger = logger;
+            _productRepository = productRepository ?? throw new ArgumentNullException(nameof(productRepository));
         }
+        
+        public IEnumerable<Entities.Product> ProductList { get; set; } = new List<Entities.Product>();
 
-        public void OnGet()
+        public async Task<IActionResult> OnGetAsync()
         {
-
+            ProductList = await _productRepository.GetProductListAsync();
+            return Page();
         }
     }
 }

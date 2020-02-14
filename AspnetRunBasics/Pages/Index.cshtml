@@ -27,11 +27,6 @@
                     </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="sr-only">Next</span>
                 </a>
             </div>
@@ -67,74 +62,10 @@
                 </div>
                 <div class="card-body">
                     <div class="row">
-                        <div class="col-sm">
-                            <div class="card">
-                                <img class="card-img-top" src="https://dummyimage.com/600x400/55595c/fff" alt="Card image cap">
-                                <div class="card-body">
-                                    <h4 class="card-title"><a href="product.html" title="View Product">Product title</a></h4>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <div class="row">
-                                        <div class="col">
-                                            <p class="btn btn-danger btn-block">99.00 $</p>
-                                        </div>
-                                        <div class="col">
-                                            <a href="cart.html" class="btn btn-success btn-block">Add to cart</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm">
-                            <div class="card">
-                                <img class="card-img-top" src="https://dummyimage.com/600x400/55595c/fff" alt="Card image cap">
-                                <div class="card-body">
-                                    <h4 class="card-title"><a href="product.html" title="View Product">Product title</a></h4>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <div class="row">
-                                        <div class="col">
-                                            <p class="btn btn-danger btn-block">99.00 $</p>
-                                        </div>
-                                        <div class="col">
-                                            <a href="cart.html" class="btn btn-success btn-block">Add to cart</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm">
-                            <div class="card">
-                                <img class="card-img-top" src="https://dummyimage.com/600x400/55595c/fff" alt="Card image cap">
-                                <div class="card-body">
-                                    <h4 class="card-title"><a href="product.html" title="View Product">Product title</a></h4>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <div class="row">
-                                        <div class="col">
-                                            <p class="btn btn-danger btn-block">99.00 $</p>
-                                        </div>
-                                        <div class="col">
-                                            <a href="cart.html" class="btn btn-success btn-block">Add to cart</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm">
-                            <div class="card">
-                                <img class="card-img-top" src="https://dummyimage.com/600x400/55595c/fff" alt="Card image cap">
-                                <div class="card-body">
-                                    <h4 class="card-title"><a href="product.html" title="View Product">Product title</a></h4>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <div class="row">
-                                        <div class="col">
-                                            <p class="btn btn-danger btn-block">99.00 $</p>
-                                        </div>
-                                        <div class="col">
-                                            <a href="cart.html" class="btn btn-success btn-block">Add to cart</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        @foreach (var product in Model.ProductList)
+                        {
+                            <partial name="_ProductItemPartial" model="@product" />
+                        }                      
                     </div>
                 </div>
             </div>
@@ -151,74 +82,10 @@
                 </div>
                 <div class="card-body">
                     <div class="row">
-                        <div class="col-sm">
-                            <div class="card">
-                                <img class="card-img-top" src="https://dummyimage.com/600x400/55595c/fff" alt="Card image cap">
-                                <div class="card-body">
-                                    <h4 class="card-title"><a href="product.html" title="View Product">Product title</a></h4>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <div class="row">
-                                        <div class="col">
-                                            <p class="btn btn-danger btn-block">99.00 $</p>
-                                        </div>
-                                        <div class="col">
-                                            <a href="cart.html" class="btn btn-success btn-block">Add to cart</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm">
-                            <div class="card">
-                                <img class="card-img-top" src="https://dummyimage.com/600x400/55595c/fff" alt="Card image cap">
-                                <div class="card-body">
-                                    <h4 class="card-title"><a href="product.html" title="View Product">Product title</a></h4>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <div class="row">
-                                        <div class="col">
-                                            <p class="btn btn-danger btn-block">99.00 $</p>
-                                        </div>
-                                        <div class="col">
-                                            <a href="cart.html" class="btn btn-success btn-block">Add to cart</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm">
-                            <div class="card">
-                                <img class="card-img-top" src="https://dummyimage.com/600x400/55595c/fff" alt="Card image cap">
-                                <div class="card-body">
-                                    <h4 class="card-title"><a href="product.html" title="View Product">Product title</a></h4>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <div class="row">
-                                        <div class="col">
-                                            <p class="btn btn-danger btn-block">99.00 $</p>
-                                        </div>
-                                        <div class="col">
-                                            <a href="cart.html" class="btn btn-success btn-block">Add to cart</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm">
-                            <div class="card">
-                                <img class="card-img-top" src="https://dummyimage.com/600x400/55595c/fff" alt="Card image cap">
-                                <div class="card-body">
-                                    <h4 class="card-title"><a href="product.html" title="View Product">Product title</a></h4>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <div class="row">
-                                        <div class="col">
-                                            <p class="btn btn-danger btn-block">99.00 $</p>
-                                        </div>
-                                        <div class="col">
-                                            <a href="cart.html" class="btn btn-success btn-block">Add to cart</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        @foreach (var product in Model.ProductList)
+                        {
+                            <partial name="_ProductItemPartial" model="@product" />
+                        }                      
                     </div>
                 </div>
             </div>
