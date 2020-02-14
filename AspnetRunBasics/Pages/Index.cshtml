@@ -31,25 +31,9 @@
                 </a>
             </div>
         </div>
-        <div class="col-12 col-md-3">
-            <div class="card">
-                <div class="card-header bg-success text-white text-uppercase">
-                    <i class="fa fa-heart"></i> Top product
-                </div>
-                <img class="img-fluid border-0" src="https://dummyimage.com/600x400/55595c/fff" alt="Card image cap">
-                <div class="card-body">
-                    <h4 class="card-title text-center"><a href="product.html" title="View Product">Product title</a></h4>
-                    <div class="row">
-                        <div class="col">
-                            <p class="btn btn-danger btn-block">99.00 $</p>
-                        </div>
-                        <div class="col">
-                            <a href="product.html" class="btn btn-success btn-block">View</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+
+        <partial name="_TopProductPartial" model="Model.ProductList.FirstOrDefault()" />       
+
     </div>
 </div>
 
@@ -62,7 +46,7 @@
                 </div>
                 <div class="card-body">
                     <div class="row">
-                        @foreach (var product in Model.ProductList)
+                        @foreach (var product in Model.ProductList.Take(4))
                         {
                             <partial name="_ProductItemPartial" model="@product" />
                         }                      
@@ -82,7 +66,7 @@
                 </div>
                 <div class="card-body">
                     <div class="row">
-                        @foreach (var product in Model.ProductList)
+                        @foreach (var product in Model.ProductList.TakeLast(4))
                         {
                             <partial name="_ProductItemPartial" model="@product" />
                         }                      
