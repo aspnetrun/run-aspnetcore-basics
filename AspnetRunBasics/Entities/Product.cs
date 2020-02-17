@@ -12,7 +12,7 @@ namespace AspnetRunBasics.Entities
         public string Summary { get; set; }
         public string Description { get; set; }
         public string ImageFile { get; set; }
-        public double Price { get; set; }
+        public decimal Price { get; set; }
         public int CategoryId { get; set; }
         public Category Category { get; set; }
     }

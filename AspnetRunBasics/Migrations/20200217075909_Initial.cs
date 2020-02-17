@@ -74,7 +74,7 @@ namespace AspnetRunBasics.Migrations
                     Summary = table.Column<string>(nullable: true),
                     Description = table.Column<string>(nullable: true),
                     ImageFile = table.Column<string>(nullable: true),
-                    Price = table.Column<double>(nullable: false),
+                    Price = table.Column<decimal>(nullable: false),
                     CategoryId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>

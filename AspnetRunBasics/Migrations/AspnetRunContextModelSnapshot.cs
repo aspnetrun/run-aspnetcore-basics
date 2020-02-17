@@ -155,8 +155,8 @@ namespace AspnetRunBasics.Migrations
                         .HasColumnType("nvarchar(80)")
                         .HasMaxLength(80);
 
-                    b.Property<double>("Price")
-                        .HasColumnType("float");
+                    b.Property<decimal>("Price")
+                        .HasColumnType("decimal(18,2)");
 
                     b.Property<string>("Summary")
                         .HasColumnType("nvarchar(max)");
