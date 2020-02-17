@@ -4,11 +4,18 @@
     ViewData["Title"] = "Cart";
 }
 
-<section class="jumbotron text-center">
-    <div class="container">
-        <h1 class="jumbotron-heading">E-COMMERCE CART</h1>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a asp-page="Index">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Shopping Cart</li>
+                </ol>
+            </nav>
+        </div>
     </div>
-</section>
+</div>
 
 <div class="container mb-4">
     <div class="row">
@@ -26,53 +33,34 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td><img src="https://dummyimage.com/50x50/55595c/fff" /> </td>
-                            <td>Product Name Dada</td>
-                            <td>In stock</td>
-                            <td><input class="form-control" type="text" value="1" /></td>
-                            <td class="text-right">124,90 €</td>
-                            <td class="text-right"><button class="btn btn-sm btn-danger"><i class="fa fa-trash"></i> </button> </td>
-                        </tr>
-                        <tr>
-                            <td><img src="https://dummyimage.com/50x50/55595c/fff" /> </td>
-                            <td>Product Name Toto</td>
-                            <td>In stock</td>
-                            <td><input class="form-control" type="text" value="1" /></td>
-                            <td class="text-right">33,90 €</td>
-                            <td class="text-right"><button class="btn btn-sm btn-danger"><i class="fa fa-trash"></i> </button> </td>
-                        </tr>
-                        <tr>
-                            <td><img src="https://dummyimage.com/50x50/55595c/fff" /> </td>
-                            <td>Product Name Titi</td>
-                            <td>In stock</td>
-                            <td><input class="form-control" type="text" value="1" /></td>
-                            <td class="text-right">70,00 €</td>
-                            <td class="text-right"><button class="btn btn-sm btn-danger"><i class="fa fa-trash"></i> </button> </td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td>Sub-Total</td>
-                            <td class="text-right">255,90 €</td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td>Shipping</td>
-                            <td class="text-right">6,90 €</td>
-                        </tr>
+
+                        @foreach (var cartItem in Model.Cart.Items)
+                        {
+                            <tr>
+                                <td><img src="https://dummyimage.com/50x50/55595c/fff" /></td>
+                                <td>@cartItem.Product.Name</td>
+                                <td>In stock</td>
+                                <td><input class="form-control" type="text" value="@cartItem.Quantity" /></td>
+                                <td class="text-right">@(cartItem.Price * cartItem.Quantity) $</td>
+                                <td class="text-right">
+
+                                    <form asp-page-handler="removetocart" method="post">
+                                        <button class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></button>
+                                        <input type="hidden" asp-for="@Model.Cart.Id" name="cartId" />
+                                        <input type="hidden" asp-for="@cartItem.Id" name="cartItemId" />
+                                    </form>
+
+                                </td>
+                            </tr>
+                        }
+
                         <tr>
                             <td></td>
                             <td></td>
                             <td></td>
                             <td></td>
                             <td><strong>Total</strong></td>
-                            <td class="text-right"><strong>346,90 €</strong></td>
+                            <td class="text-right"><strong>@Model.TotalPrice $</strong></td>
                         </tr>
                     </tbody>
                 </table>
@@ -81,14 +69,15 @@
         <div class="col mb-2">
             <div class="row">
                 <div class="col-sm-12  col-md-6">
-                    <button class="btn btn-block btn-light">Continue Shopping</button>
+                    @*<button class="btn btn-lg btn-block btn-danger">Continue Shopping</button>*@
+                    <a asp-page="Product" class="btn btn-lg btn-block btn-success">Continue Shopping</a>
                 </div>
                 <div class="col-sm-12 col-md-6 text-right">
-                    <button class="btn btn-lg btn-block btn-success text-uppercase">Checkout</button>
+                    @*<button class="btn btn-lg btn-block btn-danger text-uppercase">CheckOut</button>*@
+                    <a asp-page="CheckOut" asp-route-cartId="@Model.Cart.Id" class="btn btn-lg btn-block btn-danger text-uppercase">CheckOut</a>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
 

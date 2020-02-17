@@ -2,7 +2,6 @@
 using AspnetRunBasics.Entities;
 using Microsoft.EntityFrameworkCore;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -21,6 +20,7 @@ namespace AspnetRunBasics.Repositories
         {
             var cart =  _dbContext.Carts
                         .Include(c => c.Items)
+                            .ThenInclude(i => i.Product)
                         .FirstOrDefault(c => c.UserName == userName);
 
             if (cart != null)
