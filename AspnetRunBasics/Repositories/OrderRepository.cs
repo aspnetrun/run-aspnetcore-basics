@@ -18,7 +18,7 @@ namespace AspnetRunBasics.Repositories
         {
             _dbContext.Orders.Add(order);
             await _dbContext.SaveChangesAsync();
-            return order;            
+            return order;
         }
     }
 }

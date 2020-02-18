@@ -80,6 +80,6 @@ namespace AspnetRunBasics.Repositories
 
             _dbContext.Entry(cart).State = EntityState.Modified;
             await _dbContext.SaveChangesAsync();
-        }      
+        }
     }
 }

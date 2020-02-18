@@ -11,10 +11,12 @@ namespace AspnetRunBasics
     public class ProductModel : PageModel
     {
         private readonly IProductRepository _productRepository;
+        private readonly ICartRepository _cartRepository;
 
-        public ProductModel(IProductRepository productRepository)
+        public ProductModel(IProductRepository productRepository, ICartRepository cartRepository)
         {
             _productRepository = productRepository ?? throw new ArgumentNullException(nameof(productRepository));
+            _cartRepository = cartRepository ?? throw new ArgumentNullException(nameof(cartRepository));
         }
 
         public IEnumerable<Entities.Category> CategoryList { get; set; } = new List<Entities.Category>();
@@ -39,6 +41,15 @@ namespace AspnetRunBasics
             }
 
             return Page();
+        }
+
+        public async Task<IActionResult> OnPostAddToCartAsync(int productId)
+        {
+            //if (!User.Identity.IsAuthenticated)
+            //    return RedirectToPage("./Account/Login", new { area = "Identity" });
+
+            await _cartRepository.AddItem("test", productId);
+            return RedirectToPage("Cart");
         }
     }
 }

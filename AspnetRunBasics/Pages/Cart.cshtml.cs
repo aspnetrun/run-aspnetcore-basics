@@ -16,13 +16,11 @@ namespace AspnetRunBasics
             _cartRepository = cartRepository ?? throw new ArgumentNullException(nameof(cartRepository));
         }
 
-        public Entities.Cart Cart { get; set; } = new Entities.Cart();
-        public decimal TotalPrice { get; set; } = 0;
+        public Entities.Cart Cart { get; set; } = new Entities.Cart();        
 
         public async Task<IActionResult> OnGetAsync()
         {
-            Cart = await _cartRepository.GetCartByUserName("test");
-            CalculateTotalPrice(Cart);
+            Cart = await _cartRepository.GetCartByUserName("test");            
 
             return Page();
         }
@@ -31,14 +29,6 @@ namespace AspnetRunBasics
         {
             await _cartRepository.RemoveItem(cartId, cartItemId);
             return RedirectToPage();
-        }
-
-        private void CalculateTotalPrice(Cart cart)
-        {
-            foreach (var item in cart.Items)
-            {
-                TotalPrice += item.Price * item.Quantity;
-            }
-        }
+        }       
     }
 }
