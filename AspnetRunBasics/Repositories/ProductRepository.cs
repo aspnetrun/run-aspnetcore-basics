@@ -17,19 +17,19 @@ namespace AspnetRunBasics.Repositories
             _dbContext = dbContext ?? throw new ArgumentNullException(nameof(dbContext));
         }
 
-        public async Task<IEnumerable<Product>> GetProductListAsync()
+        public async Task<IEnumerable<Product>> GetProducts()
         {
             return await _dbContext.Products.ToListAsync();
         }
 
-        public async Task<Product> GetProductByIdAsync(int id)
+        public async Task<Product> GetProductById(int id)
         {
             return await _dbContext.Products
                 .Include(p => p.Category)
                 .FirstOrDefaultAsync(p => p.Id == id);
         }
 
-        public async Task<IEnumerable<Product>> GetProductByNameAsync(string name)
+        public async Task<IEnumerable<Product>> GetProductByName(string name)
         {
             return await _dbContext.Products
                     .Include(p => p.Category)
@@ -38,7 +38,7 @@ namespace AspnetRunBasics.Repositories
                     .ToListAsync();
         }
 
-        public async Task<IEnumerable<Product>> GetProductByCategoryAsync(int categoryId)
+        public async Task<IEnumerable<Product>> GetProductByCategory(int categoryId)
         {
             return await _dbContext.Products
                 .Where(x => x.CategoryId == categoryId)

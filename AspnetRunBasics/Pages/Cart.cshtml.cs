@@ -29,6 +29,6 @@ namespace AspnetRunBasics
         {
             await _cartRepository.RemoveItem(cartId, cartItemId);
             return RedirectToPage();
-        }       
+        }
     }
 }

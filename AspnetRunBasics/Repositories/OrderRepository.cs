@@ -1,6 +1,9 @@
 ﻿using AspnetRunBasics.Data;
 using AspnetRunBasics.Entities;
+using Microsoft.EntityFrameworkCore;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace AspnetRunBasics.Repositories
@@ -19,6 +22,15 @@ namespace AspnetRunBasics.Repositories
             _dbContext.Orders.Add(order);
             await _dbContext.SaveChangesAsync();
             return order;
+        }
+
+        public async Task<IEnumerable<Order>> GetOrdersByUserName(string userName)
+        {
+            var orderList = await _dbContext.Orders
+                            .Where(o => o.UserName == userName)
+                            .ToListAsync();
+
+            return orderList;
         }
     }
 }

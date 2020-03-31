@@ -32,7 +32,7 @@ namespace AspnetRunBasics
                 return NotFound();
             }
 
-            Product = await _productRepository.GetProductByIdAsync(productId.Value);
+            Product = await _productRepository.GetProductById(productId.Value);
             if (Product == null)
             {
                 return NotFound();

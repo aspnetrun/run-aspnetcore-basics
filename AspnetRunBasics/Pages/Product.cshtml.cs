@@ -32,12 +32,12 @@ namespace AspnetRunBasics
 
             if (categoryId.HasValue)
             {
-                ProductList = await _productRepository.GetProductByCategoryAsync(categoryId.Value);
+                ProductList = await _productRepository.GetProductByCategory(categoryId.Value);
                 SelectedCategory = CategoryList.FirstOrDefault(c => c.Id == categoryId.Value)?.Name;
             }
             else
             {
-                ProductList = await _productRepository.GetProductListAsync();
+                ProductList = await _productRepository.GetProducts();
             }
 
             return Page();

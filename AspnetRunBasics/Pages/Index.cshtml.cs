@@ -22,7 +22,7 @@ namespace AspnetRunBasics.Pages
 
         public async Task<IActionResult> OnGetAsync()
         {
-            ProductList = await _productRepository.GetProductListAsync();
+            ProductList = await _productRepository.GetProducts();
             return Page();
         }
 
