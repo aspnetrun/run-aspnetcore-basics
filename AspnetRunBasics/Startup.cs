@@ -1,5 +1,6 @@
 using AspnetRunBasics.Data;
 using AspnetRunBasics.Repositories;
+using AspnetRunBasics.Repositories.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;

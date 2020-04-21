@@ -1,7 +1,7 @@
-﻿using AspnetRunBasics.Entities;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
+using AspnetRunBasics.Entities;
 
-namespace AspnetRunBasics.Repositories
+namespace AspnetRunBasics.Repositories.Interfaces
 {
     public interface IContactRepository
     {

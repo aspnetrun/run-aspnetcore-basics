@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using AspnetRunBasics.Entities;
 using AspnetRunBasics.Repositories;
+using AspnetRunBasics.Repositories.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 

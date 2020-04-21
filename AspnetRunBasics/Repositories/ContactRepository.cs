@@ -2,6 +2,7 @@
 using AspnetRunBasics.Entities;
 using System;
 using System.Threading.Tasks;
+using AspnetRunBasics.Repositories.Interfaces;
 
 namespace AspnetRunBasics.Repositories
 {
