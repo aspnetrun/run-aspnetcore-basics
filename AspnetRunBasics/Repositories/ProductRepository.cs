@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using AspnetRunBasics.Data;
 using AspnetRunBasics.Entities;
+using AspnetRunBasics.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 namespace AspnetRunBasics.Repositories

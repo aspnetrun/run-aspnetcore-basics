@@ -1,8 +1,8 @@
-﻿using AspnetRunBasics.Entities;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
+using AspnetRunBasics.Entities;
 
-namespace AspnetRunBasics.Repositories
+namespace AspnetRunBasics.Repositories.Interfaces
 {
     public interface IOrderRepository
     {

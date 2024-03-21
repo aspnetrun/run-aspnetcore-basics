@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace AspnetRunBasics.Entities
 {
@@ -12,13 +13,7 @@ namespace AspnetRunBasics.Entities
         {
             get
             {
-                decimal totalprice = 0;
-                foreach (var item in Items)
-                {
-                    totalprice += item.Price * item.Quantity;
-                }
-
-                return totalprice;
+                return Items.Sum(item => item.Price * item.Quantity);
             }
         }
     }
